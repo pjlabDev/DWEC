@@ -106,28 +106,21 @@
 
 		}
 
-		let insertado = false;
-
 			dni = prompt("Introduzca el dni del empleado");
 
-			for (var i = 0; i < dnis.length; i++) {
+			let dniGuapo = dnis.indexOf(dni);
 			
-				if(dni.includes(dnis[i])){
+				if(dniGuapo > -1){
 
-					insertado = true;
-					document.getElementById("tabla").deleteRow(i+1);
+					document.getElementById("tabla").deleteRow(dniGuapo + 1);
+					document.getElementById("numEmp").innerHTML = numeroEmp - 1;
 					
 				}else{
 
 					alert("El empleado no existe o no figura en la base de datos.");
-					insertado = false;
-					break;
 				}
-			
-			}
-
-		document.getElementById("numEmp").innerHTML = numeroEmp - 1;
-
-
 
 	}
+
+
+	
