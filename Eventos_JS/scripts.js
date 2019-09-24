@@ -58,11 +58,9 @@
 
     
     boton.addEventListener('click',() =>{
-        print();
-    });
 
-    const print = () =>{
-        inpt2.addEventListener("keyup",()=>{
+        inpt2.addEventListener("keyup",(event)=>{
             console.log(event.key);
         });
-    }
+
+    });
