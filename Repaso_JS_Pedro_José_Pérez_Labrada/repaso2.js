@@ -14,7 +14,7 @@
 		li.appendChild(creat);
 
 		lista.insertBefore(li,document.getElementsByTagName("li")[pos-1]);
-
+	
 	}
 
 
