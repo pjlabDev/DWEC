@@ -13,3 +13,37 @@
     background: green;
 
 }
+
+.galery{
+
+    width: 950px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+
+
+.galery__item{
+
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    background: white;
+    cursor: pointer;
+
+}
+
+.galery__item2{
+
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    background: red;
+    cursor: pointer;
+
+}
