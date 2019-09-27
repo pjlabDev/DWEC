@@ -64,3 +64,16 @@
         });
 
     });
+
+
+        /**
+         * Ejercicio Basico 4
+         */
+
+        const galery = document.getElementById("galery");
+
+        galery.addEventListener('click',(event) => {
+           event.target.classList.replace("galery__item","galery__item2");
+           console.log(event.target.textContent);
+        });
+        
