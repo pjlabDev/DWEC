@@ -1,19 +1,19 @@
-.mensaje{
+#mensaje{
 
-    margin-left: 7em;
+    margin-left: 4em;
 
 }
 
 
 .tot_ban{
-    
-    margin-left: 8em;
+
+    margin-left: 7em;
 
 }
 
 .tot_jug{
 
-    margin-left: 20em;
+    margin-left: 10em;
 
 }
 
@@ -25,19 +25,70 @@
 
 #trasera{
 
-    margin-top: 25px;
-    margin-left: 20em;
-    width: 200px;
-    height: 300px;
+    height: 270px; 
+    width: 181px; 
+    margin-top: 40px; 
+    margin-left: 40px; 
     cursor: pointer;
 
 }
 
 #trasera2{
 
-    margin-top: 25px;
-    margin-left: 30em;
-    width: 200px;
-    height: 300px;
+    height: 270px; 
+    width: 181px; 
+    margin-top: 40px; 
+    margin-left: 40px;
 
 }
+
+#carjug{
+
+    height: 270px; 
+    width: 181px; 
+    margin-top: 40px; 
+    margin-left: 40px; 
+
+}
+
+#carban{
+
+    height: 270px; 
+    width: 181px; 
+    margin-top: 40px; 
+    margin-left: 40px; 
+
+}
+
+#todas_cartas{
+
+    height: 122px; 
+    margin-left: 31px;
+
+}
+
+#imagenes{
+
+    margin-left: 180px; 
+    margin-top:15px; 
+    height: 480px; 
+    width: 1009px;
+
+}
+
+.jugador{
+
+    width: 500px; 
+    height: 437px; 
+    float:left;
+
+}
+
+.banca{
+
+    width: 500px; 
+    height: 437px; 
+    float:left;
+
+}
+
