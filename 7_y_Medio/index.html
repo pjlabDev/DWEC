@@ -11,10 +11,10 @@
     <div class="todo">
  
         <b class="tot_jug">Total jugador: </b>
-        <input type="text" id="tot_Jugador">
+        <input type="text" id="tot_Jug">
         
 
-        <b class="mensaje">GANA LA PARTIDA</b>
+        <b id="mensaje">7 y Medio</b>
 
 
         <b class="tot_ban">Total Banca: </b>
@@ -23,11 +23,19 @@
         <br>
         <br>
     </div>
+    <div id="imagenes">
+            <div class="jugador">
+                <img id="trasera" onclick="pideCarta()" src="imagenes/trasera_jug.jpg" alt="Esto es una imagen">
+                <img id="carjug" alt="" src="" style="visibility: hidden">
+                <div id="cartaChica"></div>
+            </div>
+            <div class="banca">
+                <img id="trasera2" src="imagenes/trasera.jpg" alt="Esto es una imagen">
+                <img id="carban" alt="" src="" style="visibility: hidden">
+                <div id="cartaChica"></div>
+            </div>
+    </div>
     
-        <img id="trasera" src="imagenes/trasera_jug.jpg" alt="Esto es una imagen">
-        
-        <img id="trasera2" src="imagenes/trasera.jpg" alt="Esto es una imagen">
-    
-    
+        <script type="text/javascript" src="JavaScript.js"></script>
 </body>
 </html>
