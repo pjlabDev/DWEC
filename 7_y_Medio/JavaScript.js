@@ -1,60 +1,120 @@
 
-const img = document.getElementById("trasera");
+    const carta = new Array(11);
 
-const img2 = document.getElementById("traser2");
+    const palo = new Array("Oros","Copas","Bastos","Espadas");
 
-const array = new Array();
+    let total = 0;
 
-array[0] = "imagenes/1Bastos.jpg";
-arary[1] = "imagenes/1Copas.jpg";
-array[2] = "imagenes/1Espadas.jpg";
-array[3] = "imagenes/1Oro.jpg";
-arary[4] = "imagenes/2Bastos.jpg";
-array[5] = "imagenes/2Copas.jpg";
-array[6] = "imagenes/2Espadas.jpg";
-arary[7] = "imagenes/2Oros.jpg";
-array[8] = "imagenes/3Bastos.jpg";
-array[9] = "imagenes/3Copas.jpg";
-arary[10] = "imagenes/3Espadas.jpg";
-array[11] = "imagenes/3Oros.jpg";
-array[12] = "imagenes/4Bastos.jpg";
-array[13] = "imagenes/4Copas.jpg";
-arary[14] = "imagenes/4Espadas.jpg";
-array[15] = "imagenes/4Oros.jpg";
-array[16] = "imagenes/5Bastos.jpg";
-arary[17] = "imagenes/5Copas.jpg";
-array[18] = "imagenes/5Espadas.jpg";
-array[19] = "imagenes/5Oros.jpg";
-arary[20] = "imagenes/6Bastos.jpg";
-array[21] = "imagenes/6Copas.jpg";
-array[22] = "imagenes/6Espadas.jpg";
-arary[23] = "imagenes/6Oros.jpg";
-array[24] = "imagenes/7Bastos.jpg";
-array[25] = "imagenes/7Copas.jpg";
-array[26] = "imagenes/7Oros.jpg";
-arary[27] = "imagenes/7Espadas.jpg";
-array[28] = "imagenes/8Bastos.jpg";
-array[29] = "imagenes/8Oro.jpg";
-arary[30] = "imagenes/8Espadas.jpg";
-array[31] = "imagenes/8Copas.jpg";
-array[32] = "imagenes/9Espadas.jpg";
-arary[33] = "imagenes/9Oros.jpg";
-array[34] = "imagenes/9Bastos.jpg";
-array[35] = "imagenes/9Copas.jpg";
-arary[36] = "imagenes/10Espadas.jpg";
-array[37] = "imagenes/10Oros.jpg";
-array[38] = "imagenes/10Bastos.jpg";
-array[39] = "imagenes/10Copas.jpg";
+    let puntos_jug;
+
+    let puntos_ban;
+
+    for (i = 0; i<= 11; i++) {
+        
+        carta[i] = palo;
+
+    }
 
 
-function rand(n){
+    function pideCarta(){
 
-    return(Math.floor(Math.random() * n + 1 ));
+        const numeroalea = parseInt((Math.random()*10)+1);
+        const palo = parseInt(Math.random()*4);
 
-};
+        document.getElementById("carjug").src = "imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg";
+        document.getElementById("carjug").style.visibility = 'visible';
 
-img.addEventListener('click',(event)=>{
+        if(numeroalea <= 7){
 
-    event.document.getElementById("img").src = array[rand(10)-1];
+            total = total + numeroalea;
+            document.getElementById("tot_Jugador").value = total;
 
-});
+        }else if(numeroalea > 7){
+
+            total = total + 0.5;
+            document.getElementById("tot_Jugador").value = total;
+
+        }
+
+        if(total > 7.5){
+
+            puntos_jug = total;
+            document.getElementById("tot_Jugador").value = total;
+            recuento();
+            document.getElementById("trasera").src = "imagenes/trasera.jpg";
+            document.getElementById("trasera").style.cursor = "default";
+            document.getElementById("trasera").onclick = " ";
+
+        }
+
+        document.getElementById("cartaChica").innerHTML += "<img id='carjug' alt='' src='imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg' style='height:130px;width:90px'/>"
+
+    }puntos_jug
+
+    function juegaBanca(){
+
+        let time = setTimeout(juegaBanca,1000);
+        let numeroalea = parseInt((Math.random()*10)+1);
+        let palo = parseInt(Math.random()*4);
+
+
+        document.getElementById("carban").src = "imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg";
+        document.getElementById("carban").style = 'visible';
+
+        if(numeroalea <= 7){
+
+            total = total + numeroalea;
+            document.getElementById("tot_Banca").value = total;
+
+        }else if(numeroalea > 7){
+
+            total = total + 0.5;
+            document.getElementById("tot_Banca").value = total;
+
+        }
+
+        if(total > 7.5){
+
+            puntos_ban = total;
+            document.getElementById("tot_Banca").value = total;
+            recuento();
+            clearTimeout(time);
+        }
+
+        document.getElementById("cartaChica2").innerHTML += "<img id='carban' alt='' src='imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg' style='height:130px;width:90px;margin-left:70px;'/>";
+
+        
+
+    }
+
+
+
+    function recuento(){
+
+        puntos_ban = total;
+
+        if(puntos_jug === 7.5 && puntos_ban === 7.5){
+
+            document.getElementById("mensaje").textContent = "EMPATE";
+
+        }else if(puntos_jug === 7.5 && puntos_ban > 7.5 || puntos_ban > 7.5 && puntos_jug < puntos_ban){
+
+            document.getElementById("mensaje").textContent = "GANA EL JUGADOR";
+
+        }else if(puntos_jug > 7.5 && puntos_ban < puntos_jug){
+            document.getElementById("mensaje").textContent = "GANA LA BANCA";
+        }
+    }
+
+
+    function plantarse(){
+
+        document.getElementById("trasera").src = "imagenes/trasera.jpg";
+        document.getElementById("trasera").style.cursor = "default";
+        document.getElementById("trasera").onclick = " ";
+        puntos_jug = total;
+        total = 0;
+        juegaBanca();
+        recuento();
+
+    }
