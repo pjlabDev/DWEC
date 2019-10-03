@@ -44,14 +44,18 @@
             document.getElementById("trasera").src = "imagenes/trasera.jpg";
             document.getElementById("trasera").style.cursor = "default";
             document.getElementById("trasera").onclick = " ";
+            juegaBanca();
 
         }
 
+
         document.getElementById("cartaChica").innerHTML += "<img id='carjug' alt='' src='imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg' style='height:130px;width:90px'/>"
 
-    }puntos_jug
+    }
 
     function juegaBanca(){
+
+        puntos_ban = 0;
 
         let time = setTimeout(juegaBanca,1000);
         let numeroalea = parseInt((Math.random()*10)+1);
@@ -73,7 +77,7 @@
 
         }
 
-        if(total > 7.5){
+        if(total >= 7.5){
 
             puntos_ban = total;
             document.getElementById("tot_Banca").value = total;
@@ -82,8 +86,6 @@
         }
 
         document.getElementById("cartaChica2").innerHTML += "<img id='carban' alt='' src='imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg' style='height:130px;width:90px;margin-left:70px;'/>";
-
-        
 
     }
 
@@ -103,6 +105,8 @@
 
         }else if(puntos_jug > 7.5 && puntos_ban < puntos_jug){
             document.getElementById("mensaje").textContent = "GANA LA BANCA";
+        }else if(puntos_jug <= 7.5 && puntos_ban > puntos_jug || puntos_ban === 7.5){
+            document.getElementById("mensaje").textContent = "GANA LA BANCA";
         }
     }
 
@@ -116,5 +120,12 @@
         total = 0;
         juegaBanca();
         recuento();
+
+    }
+
+
+    function reiniciar(){
+        
+        location.reload();
 
     }
