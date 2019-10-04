@@ -3,7 +3,9 @@
 
     const palo = new Array("Oros","Copas","Bastos","Espadas");
 
-    let total = 0;
+    let total_jug = 0;
+
+    let total_ban = 0;
 
     let puntos_jug;
 
@@ -26,20 +28,20 @@
 
         if(numeroalea <= 7){
 
-            total = total + numeroalea;
-            document.getElementById("tot_Jugador").value = total;
+            total_jug = total_jug + numeroalea;
+            document.getElementById("tot_Jugador").value = total_jug;
 
         }else if(numeroalea > 7){
 
-            total = total + 0.5;
-            document.getElementById("tot_Jugador").value = total;
+            total_jug = total_jug + 0.5;
+            document.getElementById("tot_Jugador").value = total_jug;
 
         }
 
-        if(total > 7.5){
+        if(total_jug > 7.5){
 
-            puntos_jug = total;
-            document.getElementById("tot_Jugador").value = total;
+            puntos_jug = total_jug;
+            document.getElementById("tot_Jugador").value = total_jug;
             recuento();
             document.getElementById("trasera").src = "imagenes/trasera.jpg";
             document.getElementById("trasera").style.cursor = "default";
@@ -67,20 +69,20 @@
 
         if(numeroalea <= 7){
 
-            total = total + numeroalea;
-            document.getElementById("tot_Banca").value = total;
+            total_ban = total_ban + numeroalea;
+            document.getElementById("tot_Banca").value = total_ban;
 
         }else if(numeroalea > 7){
 
-            total = total + 0.5;
-            document.getElementById("tot_Banca").value = total;
+            total_ban = total_ban + 0.5;
+            document.getElementById("tot_Banca").value = total_ban;
 
         }
 
-        if(total >= 7.5){
+        if(total_ban >= 7.5){
 
-            puntos_ban = total;
-            document.getElementById("tot_Banca").value = total;
+            puntos_ban = total_ban;
+            document.getElementById("tot_Banca").value = total_ban;
             recuento();
             clearTimeout(time);
         }
@@ -93,9 +95,9 @@
 
     function recuento(){
 
-        puntos_ban = total;
+        puntos_ban = total_ban;
 
-        if(puntos_jug === 7.5 && puntos_ban === 7.5){
+        if(puntos_jug === 7.5 && puntos_ban === 7.5 || puntos_jug === puntos_ban){
 
             document.getElementById("mensaje").textContent = "EMPATE";
 
@@ -104,9 +106,21 @@
             document.getElementById("mensaje").textContent = "GANA EL JUGADOR";
 
         }else if(puntos_jug > 7.5 && puntos_ban < puntos_jug){
+
             document.getElementById("mensaje").textContent = "GANA LA BANCA";
+
         }else if(puntos_jug <= 7.5 && puntos_ban > puntos_jug || puntos_ban === 7.5){
+
             document.getElementById("mensaje").textContent = "GANA LA BANCA";
+
+        }else if(puntos_jug === 7.5){
+
+            document.getElementById("mensaje").textContent = "GANA EL JUGADOR";
+
+        }else if(puntos_ban === 7.5){
+
+            document.getElementById("mensaje").textContent = "GANA LA BANCA";
+            
         }
     }
 
@@ -116,8 +130,9 @@
         document.getElementById("trasera").src = "imagenes/trasera.jpg";
         document.getElementById("trasera").style.cursor = "default";
         document.getElementById("trasera").onclick = " ";
-        puntos_jug = total;
-        total = 0;
+        puntos_jug = total_jug;
+        total_jug = 0;
+        total_ban = 0;
         juegaBanca();
         recuento();
 
