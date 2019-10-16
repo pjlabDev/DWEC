@@ -4,34 +4,21 @@
 
 
     boton.addEventListener('click', () =>{
-
-        let xhr;
-        if(window.XMLHttpRequest) xhr = new XMLHttpRequest()
-        else xhr = new ActiveXObject("Microsoft.XMLHTTP");
-
-       xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
-
-
-        xhr.addEventListener('load', (data) =>{
-
-            let array = JSON.parse(data.target.response);
-
+        let lista = document.getElementById("lista");
             fetch('https://jsonplaceholder.typicode.com/users')
-            .then(function(){
+            .then(res => res.ok ? Promise.resolve(res) : Promise.reject(res))
+            .then(res => res.json())
+            .then(res => {
 
-                for(user of array){
-
-                    let lista = document.getElementById("lista");
+                for(user of res){
+                    
                     let li = document.createElement("li");
                     let texto = document.createTextNode(user.id + " - " + user.name);
                     li.appendChild(texto);
                     lista.appendChild(li);
                 }
             });
-            
-        });
 
-        xhr.send();
         boton.disabled = true;
 
     });
