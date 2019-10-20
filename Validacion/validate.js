@@ -82,17 +82,89 @@ const validateCreditCard = (card) => {
 
 
 
-    const boton = document.getElementById("boton");
+    const formulario = document.getElementById("formulario");
+    const dni = document.getElementById("dni");
+    const cuentaBanc = document.getElementById("cuentaBanc");
+    const email = document.getElementById("email");
+    const pass = document.getElementById("pass");
+    const usuario = document.getElementById("usuario");
+    const url = document.getElementById("url");
+    const ip = document.getElementById("ip");
+    const tCredito = document.getElementById("tCredito");
 
-    boton.addEventListener("click",()=>{
-
-        validateDni();
-        validateEmail();
-        validateIP();
-        validateIban();
-        validatePasswordComplex();
-        validateUrl();
-        validateUsername();
-        validateCreditCard();
-
+    const formIsValid = {
+        dni: false,
+        email: false,
+        cuentaBanc: false,
+        pass: false,
+        usuario: false,
+        url: false,
+        ip: false,
+        tCredito: false
+    
+    }
+    
+    formulario.addEventListener('submit', (e) => {
+        e.preventDefault();
+        validateForm();
+    
     });
+    
+    dni.addEventListener('change', (e) => {
+        if(validateDni(dni) == "DNI válido"){
+            formIsValid.dni = true;
+        }
+    });
+    
+    email.addEventListener('change', (e) => {
+        if(validateEmail(email) == "email válido"){
+            formIsValid.email = true;
+        }
+    });
+    
+    cuentaBanc.addEventListener('change', (e) => {
+        if(validateIban(cuentaBanc) == "iban válido"){
+            formIsValid.iban = true;
+        }
+    });
+    
+    pass.addEventListener('change', (e) => {
+        if(validatePasswordModerate(pass) == "password válido"){
+            formIsValid.password = true;
+        }
+    });
+    
+    usuario.addEventListener('change', (e) => {
+        if(validateUsername(usuario) == "username válido"){
+            formIsValid.username = true;
+        }
+    });
+    
+    url.addEventListener('change', (e) => {
+        if(validateUrl(url) == "url válida"){
+            formIsValid.url = true;
+        }
+    });
+    
+    ip.addEventListener('change', (e) => {
+        if(validateIP(ip) == "ip válida"){
+            formIsValid.ip = true;
+        }
+    });
+    
+    tCredito.addEventListener('change', (e) => {
+        if(validateCreditCard(tCredito) == "card válido"){
+            formIsValid.tarjeta = true;
+        }
+    });
+    
+    const validateForm = () => {
+        const formValues = Object.values(formIsValid);
+        const valid = formValues.findIndex(value => value == false);
+        if(valid == -1){
+            form.submit();
+        }else{
+            alert("DATOS INVALIDOS");
+        }
+    }
+    
