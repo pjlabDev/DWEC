@@ -1,0 +1,36 @@
+.grid-container{
+
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+
+
+}
+
+.grid-item{
+
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.botones{
+
+    text-align: center;
+
+}
+
+.buttonSubmit{
+
+    border-radius: 20%;
+    background-color: aqua;
+
+}
+
+.cartaBan{
+
+    text-align: right;
+
+}
