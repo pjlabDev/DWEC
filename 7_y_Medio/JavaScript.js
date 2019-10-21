@@ -64,25 +64,25 @@
         let palo = parseInt(Math.random()*4);
 
 
-        document.getElementById("carban").src = "imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg";
-        document.getElementById("carban").style = 'visible';
+        document.getElementById("cartaBan").src = "imagenes/" + numeroalea + carta[numeroalea][palo] + ".jpg";
+        document.getElementById("cartaBan").style = 'visible';
 
         if(numeroalea <= 7){
 
             total_ban = total_ban + numeroalea;
-            document.getElementById("tot_Banca").value = total_ban;
+            document.getElementById("puntos_Ban").value = total_ban;
 
         }else if(numeroalea > 7){
 
             total_ban = total_ban + 0.5;
-            document.getElementById("tot_Banca").value = total_ban;
+            document.getElementById("puntos_Ban").value = total_ban;
 
         }
 
         if(total_ban >= 7.5){
 
             puntos_ban = total_ban;
-            document.getElementById("tot_Banca").value = total_ban;
+            document.getElementById("puntos_Ban").value = total_ban;
             recuento();
             clearTimeout(time);
         }
