@@ -1,0 +1,29 @@
+571  sudo apt install nodejs
+  572  node -v
+  573  sudo apt install npm
+  574  sudo npm install -g typescript
+  575  tsc --version
+  576  sudo npm install -g @angular/cli
+  577  ng -version
+  578  sudo apt remove nodejs
+  579  sudo apt install -y nodejs
+  580  nodejs -version
+  581  nodejs -v
+  582  sudo apt curl
+  583  sudo apt install curl
+  584  curl -sL https://deb.nodesource.com/setup-12.x | sudo -E bash
+  585  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
+  586  npm --version
+  587  nodejs -v
+  588  sudo apt install npm
+  589  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
+  590  sudo apt-get update
+  591  nodejs -v
+  592  sudo apt install curl
+  593  curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash
+  594  npm --version
+  595  sudo npm cache clean
+  596  sudo npm install -g n
+  597  sudo n stable
+  598  nodejs -v
+
