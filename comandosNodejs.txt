@@ -26,4 +26,13 @@
   596  sudo npm install -g n
   597  sudo n stable
   598  nodejs -v
+Crear proyecto con angular
+  ng new project
+Crear proyecto con ionic
+  659  ionic start myApp tabs
+  660  cd myApp/
+  661  ionic serve
+  662  ionic serve -o
+  663  ionic serve --lab
+
 
