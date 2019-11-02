@@ -1,4 +1,4 @@
-571  sudo apt install nodejs
+  571  sudo apt install nodejs
   572  node -v
   573  sudo apt install npm
   574  sudo npm install -g typescript
