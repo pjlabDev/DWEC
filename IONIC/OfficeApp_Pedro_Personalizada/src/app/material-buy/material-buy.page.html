@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button text="Volver" defaultHref="/materials"></ion-back-button>
+    </ion-button>
+    <ion-title>Comprar {{ loadedMaterial.name }}</ion-title>
+    <ion-button slot="end">
+      <ion-button (click)="buyMaterial()" [disabled]="!form.valid">
+        <ion-icon slot="icon-only" name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
