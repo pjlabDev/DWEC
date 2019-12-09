@@ -19,8 +19,8 @@ export class MaterialsPage implements OnInit {
     });
   }
 
-  onEditOffer(materialId: string, slidingItem: IonItemSliding){
-    this.router.navigate(['/','materials','edit',materialId]);
+  onEditOffer(materialId: string, slidingItem: IonItemSliding) {
+    this.router.navigate(['/', 'materials', 'edit', materialId]);
     slidingItem.close();
   }
 

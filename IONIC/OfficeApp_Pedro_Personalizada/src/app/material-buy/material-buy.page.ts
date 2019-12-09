@@ -14,27 +14,24 @@ export class MaterialBuyPage implements OnInit {
   form: FormGroup;
   public loadedMaterial: Material;
 
-  constructor(private materialService: MaterialsService, private route: ActivatedRoute, private navCtrl: NavController, private toastCtrl: ToastController, private router: Router) { }
+  constructor(
+    private materialService: MaterialsService,
+    private route: ActivatedRoute,
+    private navCtrl: NavController,
+    private toastCtrl: ToastController,
+    private router: Router) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(paramMap =>{
-      if(!paramMap.has('materialId')){
+    this.route.paramMap.subscribe(paramMap => {
+      if (!paramMap.has('materialId')) {
         this.navCtrl.navigateBack('/materials');
         return;
       }
 
-      this.materialService.getMaterial(paramMap.get('materialId')).subscribe(material =>{
+      this.materialService.getMaterial(paramMap.get('materialId')).subscribe(material => {
         this.loadedMaterial = material;
 
         this.form = new FormGroup({
-          title: new FormControl(this.loadedMaterial.name, {
-            updateOn: 'change',
-            validators: [Validators.required]
-          }),
-          description: new FormControl(this.loadedMaterial.description, {
-            updateOn: 'change',
-            validators: [Validators.required, Validators.maxLength(50)]
-          }),
           quantity: new FormControl(this.loadedMaterial.quantity, {
             updateOn: 'change',
             validators: [Validators.required, Validators.min(1)]
@@ -44,9 +41,22 @@ export class MaterialBuyPage implements OnInit {
     });
   }
 
-  buyMaterial(){
-    this.materialService.updateMaterial(this.loadedMaterial.id, this.form.value.title, this.form.value.description, this.form.value.quantity, this.form.value.price)
-    .subscribe(() =>{
+  getPricexQuantity() {
+    let cant = 0;
+    // tslint:disable-next-line: radix
+    const precio: number = parseInt((document.getElementById('precio') as HTMLInputElement).value);
+    const cantidad = (document.getElementById('cantidad') as HTMLInputElement).value;
+
+    // tslint:disable-next-line: radix
+    cant = cant + (parseInt(cantidad) * precio);
+    document.getElementById('precioFinal').innerHTML = cant.toString() + ' €';
+  }
+
+
+  buyMaterial() {
+    this.materialService.updateMaterialByBuy(
+      this.loadedMaterial.id)
+    .subscribe(() => {
       this.toastCtrl.create({
         animated: true,
         duration: 4000,
@@ -56,7 +66,7 @@ export class MaterialBuyPage implements OnInit {
       }).then(toastEl => {
         toastEl.present();
         this.router.navigate(['/materials']);
-      })
+      });
     });
   }
 

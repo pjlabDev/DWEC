@@ -14,16 +14,21 @@ export class MaterialEditPage implements OnInit {
   form: FormGroup;
   public loadedMaterial: Material;
 
-  constructor(private materialService: MaterialsService, private route: ActivatedRoute, private navCtrl: NavController, private toastCtrl: ToastController, private router: Router) { }
+  constructor(
+    private materialService: MaterialsService,
+    private route: ActivatedRoute,
+    private navCtrl: NavController,
+    private toastCtrl: ToastController,
+    private router: Router) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(paramMap =>{
-      if(!paramMap.has('materialId')){
+    this.route.paramMap.subscribe(paramMap => {
+      if (!paramMap.has('materialId')) {
         this.navCtrl.navigateBack('/materials');
         return;
       }
 
-      this.materialService.getMaterial(paramMap.get('materialId')).subscribe(material =>{
+      this.materialService.getMaterial(paramMap.get('materialId')).subscribe(material => {
         this.loadedMaterial = material;
 
         this.form = new FormGroup({
@@ -44,9 +49,10 @@ export class MaterialEditPage implements OnInit {
     });
   }
 
-  editMaterial(){
-    this.materialService.updateMaterial(this.loadedMaterial.id, this.form.value.title, this.form.value.description, this.form.value.quantity, this.form.value.price)
-    .subscribe(() =>{
+  editMaterial() {
+    this.materialService.updateMaterial(
+      this.loadedMaterial.id, this.form.value.title, this.form.value.description, this.form.value.quantity, this.form.value.price)
+    .subscribe(() => {
       this.toastCtrl.create({
         animated: true,
         duration: 4000,
@@ -56,7 +62,7 @@ export class MaterialEditPage implements OnInit {
       }).then(toastEl => {
         toastEl.present();
         this.router.navigate(['/materials']);
-      })
+      });
     });
   }
 
