@@ -46,9 +46,9 @@ var game = new Phaser.Game(config);
 function preload ()
 {
     this.load.image('sky', 'assets/fondo.png');
-    this.load.image('ground', 'assets/platform.png');
-    this.load.image('star', 'assets/star.png');
-    this.load.image('bomb', 'assets/bomb.png');
+    this.load.image('ground', 'assets/platform_2.png');
+    this.load.image('star', 'assets/gema.png');
+    this.load.image('bomb', 'assets/monstro.png');
     this.load.spritesheet('dude', 'assets/malespite.png', { frameWidth: 50, frameHeight: 48 });
 }
 
@@ -117,7 +117,7 @@ function create ()
     bombs = this.physics.add.group();
 
     //  The score
-    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#FFFFFF' });
 
     //  Collide the player and the stars with the platforms
     this.physics.add.collider(player, platforms);

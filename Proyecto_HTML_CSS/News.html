@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="StyleSheet" href="estilos.css" type="text/css">
+    <script src="main.js"></script>
+    <link rel="StyleSheet" href="css/flexslider.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+$(function(){
+SyntaxHighlighter.all();
+});
+$(window).load(function(){
+$('.flexslider').flexslider({
+animation: "slide",
+start: function(slider){
+$('body').removeClass('loading');
+}
+});
+});
+</script>
+
+</head>
+<div class="principal">
+    <div class="cabecera">
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="Images/frt.jpg" />
+            </li>
+            <li>
+                <img src="Images/frt.png" />
+            </li>
+            <li>
+                <img src="Images/tormen.jpg" />
+            </li>
+            <li>
+                <img src="Images/salvar.jpg" />
+            </li>
+            <li>
+                <img src="Images/negrito.jpg" />
+            </li>
+        </ul>
+    </div>
+    </div>
+
+<style>
+        body {
+            background: url(Images/seas5.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        .cabecera{
+            display: block;
+            background: rgba(105, 0, 255, 0.9);
+            width: 1000px;
+            margin-top: 80px;
+            border: 2.5px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            top: 200px;
+        }
+        .cabecera2 {
+            display: block;
+            background: rgba(0, 0, 0, 0.9);
+            width: 1000px;
+            height: 1650px;
+            margin-top: 5px;
+            border: 2.5px solid rgb(0, 0, 0);
+            padding: 0px;
+            border-radius: 20px;
+            top: 200px;
+        }
+        .contenedor-350 {
+            background: rgb(255, 255, 255, 0.9);
+            margin-left: 50px;
+            margin-top: 25px;
+            padding: 5px;
+            flex: 1 6 25%;
+            order: 1;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            width: 350px;
+        }
+        
+</style>
+<body>
+    <div class="principal">
+        <div class="cabecera2">
+            <!-- Esto es un comentario -->
+            <h1 style="color:white; font-style: bold;">OBJETOS ELIMINADOS</h1>
+
+                <div class="card-group">
+  <div class="card" style="background: rgb(22, 138, 255); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h3 class="card-title"><b style="color:black;">Subfusil (Raro)</b></h3>
+            <hr>
+      <p class="card-text"><b>Un arma muy potente, buena cadencia de dispario y gran daño. Consta de un cargador en forma de tambor que le proporciona una gran cantidad de balas.</b></p>
+      <img src="Images/Tambor.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+  <div class="card" style="background: rgb(22, 138, 255); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h4 class="card-title"><b style="color:black;">Fuerte Portátil (Raro)</b></h4>
+        <hr>
+      <p class="card-text"><b style="color:black;">Es un objeto parecido a una granada que al lanzarlo crea una estructura de metal en forma de embudo, compuesta de dos pisos.</b></p>
+        <img src="Images/fuerte.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+  <div class="card" style="background: rgb(255, 206, 39); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h4 class="card-title"><b style="color:black;">Escopeta de doble cañón (Épica/Legendaria)</b></h4>
+        <hr>
+      <p class="card-text"><b style="color:black;">Escopeta épica y legendaria que se puede disparar dos veces en "rápida sucesión", gran daño pero muy poca velocidad de recarga.</b></p>
+        <img src="Images/escopeta.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+</div>
+        <div class="card-group">
+  <div class="card" style="background: rgb(101, 49, 221); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h3 class="card-title"><b style="color:black;">Duales (Raro/Épico)</b></h3>
+            <hr>
+      <p class="card-text"><b>Dos pistolas con poca cadencia, pero al ser dos, aumenta el daño y a su vez la velocidad del disparo de bala en bala, cargador corto y muy eficaz a cortas distancias.</b></p>
+      <img src="Images/duales.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+  <div class="card" style="background: rgb(101, 49, 221); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h4 class="card-title"><b style="color:black;">Ballesta (Raro/Épico)</b></h4>
+        <hr>
+      <p class="card-text"><b style="color:black;">Arma que lanza flechas, no muy precisa en movimiento, se recomendaba utilizarla para el lejos, no tiene gran daño.</b></p>
+        <img src="Images/ballesta.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+  <div class="card" style="background: rgb(97, 255, 1); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h4 class="card-title"><b style="color:black;">Revólver de 6 balas (Poco común/Raro)</b></h4>
+        <hr>
+      <p class="card-text"><b style="color:black;">Revólver que disparaba seis balas, si se hacía de cadera tipo "vaquero del oeste", las balas se disparaban con gran velocidad, aún así es poco precisa y un daño medio/alto (en la cabeza).</b></p>
+        <img src="Images/revolver.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+</div>
+     <div class="card-group">
+  <div class="card" style="background: rgb(97, 255, 1); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h3 class="card-title"><b style="color:black;">Bomba Lapa (Poco común)</b></h3>
+            <hr>
+      <p class="card-text"><b>Una bomba que hace 100 de daño al enemigo si le explota, esta bomba puede adherirse a cualquier superficie incluyendo a los enemigos.</b></p>
+      <img src="Images/Bomba.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+  <div class="card" style="background: rgb(22, 138, 255); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h4 class="card-title"><b style="color:black;">FESQUERA (Raro)</b></h4>
+        <hr>
+      <p class="card-text"><b style="color:black;">Trampa que nos permite congelar por un pequeño periodo de tiempo a nuestro enemigo, demanera que el enemigo se deslizará por donde pase.</b></p>
+        <img src="Images/fresquera.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+  <div class="card" style="background: rgb(22, 138, 255); border: 2.5px solid rgb(0, 0, 0);">
+    <div class="card-body">
+      <h4 class="card-title"><b style="color:black;">Subfusil con silenciador (Raro)</b></h4>
+        <hr>
+      <p class="card-text"><b style="color:black;">Subfusil que lleva incorporado un silenciador, buen alcance, gran daño y una buena cadencia para disparar sus 30 balas que tiene en el cargador.</b></p>
+        <img src="Images/subfusil2.jpg" width="250" height="150" alt="Esto es una imagen" style="border-radius: 10px;">
+    </div>
+  </div>
+</div>
+</div>
+        <div class="menu">
+            <a href="Index.html">Principal</a>
+            <a href="Salvar_Mundo.html">Salvar el Mundo</a>
+            <a href="Battle_Royal.html">Battle Royale</a>
+            <a href="Torneos.html">Torneos</a>
+            <a href="News.html">News</a>
+        </div>
+    </div>
+    <footer class = "contenedor-500" style="text-align-last: center">
+        <center>
+            <b style="color:black">Seguirme en mis redes sociales para más información</b><br>
+            <br>
+            <a href="https://www.facebook.com" target="_blank">
+                <img alt="Sigueme en facebook" height="40" src="Images/face.png" title="Sigueme en Facebook" width="40" style="margin-bottom: 20px;"/>
+            </a>
+
+            <a href="https://www.github.com/PedrassoxD" target="_blank">
+                <img alt="Sigueme en Github" height="40" src="Images/github.png" title="Sigueme en Github" width="40" style="margin-bottom: 20px;"/>
+            </a>
+
+            <a href="mailto:pedroperlab@gmail.com" target="_blank">
+                <img alt="Mándame algún correo" height="40" src="Images/gmail.png" title="Mándame algún correo" width="40" style="margin-bottom: 20px;"/>
+            </a>
+
+            <a href="https://twitter.com/@Sniperpedrito" target="_blank">
+                <img alt="Sigueme en Twitter" height="40" src="Images/twiter.png" title="Sigueme en Twitter" width="40" style="margin-bottom: 20px;"/>
+            </a>
+        </center>
+    </footer>
+</body>
+</html>

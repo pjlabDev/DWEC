@@ -1,0 +1,156 @@
+body {
+    background: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+h1 {
+    margin-top: 0px;
+}
+
+p {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+    color: #f6a;
+    font-size: 20px;
+}
+
+a:hover {
+    color: rgb(228, 26, 26);
+}
+
+div{
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.principal {
+    display: block;
+    margin: 0 auto;
+}
+
+.cabecera{
+    display: block;
+    background: rgba(105, 0, 255, 0.9);
+    width: 1000px;
+    margin-top: 80px;
+    border: 2.5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    top: 200px;
+}
+
+.cabecera2 {
+    display: block;
+    background: rgba(105, 0, 255, 0.9);
+    width: 1000px;
+    height: 500px;
+    margin-top: 5px;
+    border: 2.5px solid rgb(0, 0, 0);
+    padding: 0px;
+    border-radius: 20px;
+    top: 200px;
+}
+
+.pie {
+    display: block;
+    background: #ffffff;
+    width: 1000px;
+    margin-top: 5px;
+}
+
+.cuerpo {
+    min-height: 200px;
+    width: 1000px;
+    padding: 0px;
+    margin: 0 auto;
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row;
+}
+
+.contenedor-500 {
+    background: rgba(105, 0, 255, 0.9);
+    padding: 5px;
+    flex: 1 6 50%;
+    order: 1;
+    margin: 2px;
+    border: 2.5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.contenedor-250 {
+    background: rgb(105, 0, 255, 0.9);
+    margin: 2px;
+    padding: 5px;
+    flex: 1 6 25%;
+    order: 1;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 500px
+}
+
+.contenedor-350 {
+    background: rgb(79, 174, 255, 0.9);
+    margin: 2px;
+    padding: 5px;
+    flex: 1 6 25%;
+    order: 1;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    width: 500px
+}
+
+.menu {
+    position: fixed;
+    top: 0px;
+    left: 10%;
+    right: 10%;
+    display: flex;
+    flex-flow: row;
+    width: 850px;
+    height: 80px;
+    margin: 0 auto;
+    background: #00000000;
+    margin-top: 5px;
+    padding: 5px; 
+}
+
+.menu > a {
+    text-decoration: none;
+    background: #702c99;
+    flex: 1 1 auto;
+    order: 1;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    margin: 3px;
+    padding: 15px;
+    font-size: 15px;
+    width: 200px;
+    transition: width 0.7s ease-out;
+}
+
+.menu > a:hover{
+    background: #702c99;
+    color: #ffffff;
+    width: 250px;
+}    
+
+ body {
+        background: url(Images/galaxy.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+a.link {
+        text-decoration: underline;
+        color: black;
+    }
+a.link:hover {
+        color: white;
+    }

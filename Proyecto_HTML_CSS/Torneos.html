@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Torneos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="StyleSheet" href="estilos.css" type="text/css">
+    <script src="main.js"></script>
+    <link rel="StyleSheet" href="css/flexslider.css" type="text/css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+$(function(){
+SyntaxHighlighter.all();
+});
+$(window).load(function(){
+$('.flexslider').flexslider({
+animation: "slide",
+start: function(slider){
+$('body').removeClass('loading');
+}
+});
+});
+</script>
+<style>
+    .principal {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .cabecera {
+        display: block;
+        background: rgba(79, 174, 255, 0.9);
+        width: 1000px;
+        margin-top: 50px;
+        border: 2.5px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        top: 200px;
+    }
+    .contenedor-250 {
+        background: rgb(79, 174, 255, 0.9);
+        margin: 2px;
+        padding: 5px;
+        flex: 1 6 25%;
+        order: 1;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        width: 500px
+    }
+    .cabecera2 {
+        display: block;
+        background: rgba(79, 174, 255, 0.9);
+        width: 1000px;
+        height: 500px;
+        margin-top: 5px;
+        border: 2.5px solid rgb(0, 0, 0);
+        padding: 0px;
+        border-radius: 20px;
+        top: 200px;
+    }
+    .cabecera{
+        display: block;
+        background: rgba(105, 0, 255, 0.9);
+        width: 1000px;
+        margin-top: 80px;
+        border: 2.5px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        top: 200px;
+    }
+
+</style>
+</head>
+<div class="principal">
+    <div class="cabecera">
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="Images/frt.jpg" />
+            </li>
+            <li>
+                <img src="Images/frt.png" />
+            </li>
+            <li>
+                <img src="Images/tormen.jpg" />
+            </li>
+            <li>
+                <img src="Images/salvar.jpg" />
+            </li>
+            <li>
+                <img src="Images/negrito.jpg" />
+            </li>
+        </ul>
+    </div>
+    </div>
+
+<style>
+        body {
+            background: url(Images/ftbr.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+        a.link {
+            text-decoration: underline;
+            color: black;
+        }
+        a.link:hover {
+            color: white;
+        }
+        table{
+                background-color: white;
+            }
+            #IDENTIFICADOR{
+                margin-top: 80px;
+                border: solid 5px;
+                font: 1em arial;
+                width: 500px;
+            }
+            td{
+                color:white;
+                border:solid 3px;
+            }
+            #torneo1{
+                color:blue;
+            }
+            #puntos1{
+                font-style: bold;
+                color:black;
+            }
+            #PUNTUACIÓN{
+                color:black;
+            }
+</style>
+<body>
+    <div class="principal">
+        <div class="cabecera2">
+            <!-- Esto es un comentario -->
+            <h1>Torneos</h1>
+                <hr>
+            <video controls width="560" height="315" style="border-radius: 10px; margin-top: 25px;">
+                 <source src="Images/Torneos.mp4" type="video/mp4">
+            </video>
+            <br>
+            <br>
+            <b>Para más información <a class="link" href="https://www.arenagg.com/es/game/fortnite/tournaments">Click aquí</a></b>
+        </div>
+
+        <div class="menu">
+            <a href="Index.html">Principal</a>
+            <a href="Salvar_Mundo.html">Salvar el Mundo</a>
+            <a href="Battle_Royal.html">Battle Royale</a>
+            <a href="Torneos.html">Torneos</a>
+            <a href="News.html">News</a>
+        </div>
+        <div class="cuerpo">
+            <div class="contenedor-250">
+                <h1>Participación</h1>
+                <table align="center" border="2" id="IDENTIFICADOR" style="float: right; margin-right: 50px; margin-top: 20px;">
+            <tr>
+                <td id="PUNTUACIÓN" colspan="6">PUNTUACIÓN</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo en solitario</td>
+                <td id="puntos1" colspan="2">25 Puntos</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo en Prácticas de Dúo</td>
+
+                <td id="puntos1" colspan="2">30 Puntos</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo Chatarra</td>
+
+                <td id="puntos1" colspan="2">25 Puntos</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo Viernes noche de Fortnite</td>
+
+                <td id="puntos1" colspan="2">35 Puntos</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo Copa Limitada</td>
+
+                <td id="puntos1" colspan="2">25 Puntos</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo Winter Royale </td>
+
+                <td id="puntos1" colspan="2">30 Puntos</td>
+            </tr>
+            <tr>
+                <td id="torneo1" colspan="4">Torneo Alquimista Copa Limitada</td>
+
+                <td id="puntos1" colspan="2">25 Puntos</td>
+            </tr>
+
+        </table>
+      <form style="text-align: left;" action="http://www.iesjacaranda-brenes.org/lmsgi/resultado.php" method="post">
+        <b>Nombre</b><br>
+        <input maxlength="30" type="text" name="Nombre"/> <i class="fas fa-angle-left"></i>
+        <br>
+        <br>
+        <b>Apellidos</b><br>
+        <input maxlength="80" type="text" name="Apellidos"/> <i class="fas fa-angle-left"></i>
+        <br>
+        <br>
+        <b>Correo electrónico</b><br>
+        <input maxlength="50" type="text" name="Correo"/> <i class="fas fa-angle-left"></i>
+        <br>
+        <br>
+        <b>DNI</b><br>
+        <input maxlength="9" type="text" name="DNI"/> <i class="fas fa-angle-left"></i>
+        <br>
+        <br>
+        <b>Sexo</b><br>
+        <input type="radio" name="Sexo"><b>Hombre</b></input> <i class="fas fa-angle-left"></i>
+        <br>
+        <input type="radio" name="Sexo"><b>Mujer</b></input> <i class="fas fa-angle-left" style="margin-left: 18px;"></i>
+        <br>
+        <br>
+        <b>Incluir mi foto (opcional)</b>
+        <button type="find" class="btn btn-secondary"><i class="fas fa-chart-area">  Elegir...</i></button> <i class="fas fa-angle-left"></i>
+        <br>
+        <br>
+        <b>Mayor de edad</b>
+        <input type="checkbox"/> <i class="fas fa-angle-left"></i>
+        <br>
+        <button type="submit" class="btn btn-success"><i class="fas fa-address-card">  Guardar cambios</i></button>
+        <button type="reset" class="btn btn-danger"><i class="fas fa-eraser">   Borrar los datos introducidos</i></button>
+    </form>
+            </div>
+        </div>
+    </div>
+    <footer class = "contenedor-500" style="text-align-last: center">
+        <center>
+            <b style="color:black">Seguirme en mis redes sociales para más información</b><br>
+            <br>
+            <a href="https://www.facebook.com" target="_blank">
+                <img alt="Sigueme en facebook" height="40" src="Images/face.png" title="Sigueme en Facebook" width="40" style="margin-bottom: 20px;"/>
+            </a>
+
+            <a href="https://www.github.com/PedrassoxD" target="_blank">
+                <img alt="Sigueme en Github" height="40" src="Images/github.png" title="Sigueme en Github" width="40" style="margin-bottom: 20px;"/>
+            </a>
+
+            <a href="mailto:pedroperlab@gmail.com" target="_blank">
+                <img alt="Mándame algún correo" height="40" src="Images/gmail.png" title="Mándame algún correo" width="40" style="margin-bottom: 20px;"/>
+            </a>
+
+            <a href="https://twitter.com/@Sniperpedrito" target="_blank">
+                <img alt="Sigueme en Twitter" height="40" src="Images/twiter.png" title="Sigueme en Twitter" width="40" style="margin-bottom: 20px;"/>
+            </a>
+        </center>
+    </footer>
+</body>
+</html>
