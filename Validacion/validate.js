@@ -163,6 +163,14 @@ const validateCreditCard = (card) => {
             form.submit();
         }else{
             alert("DATOS INVALIDOS");
+            console.log(dni.value);
+            console.log(cuentaBanc.value);
+            console.log(email.value);
+            console.log(pass.value);
+            console.log(usuario.value);
+            console.log(url.value);
+            console.log(ip.value);
+            console.log(tCredito.value);
         }
     }
     

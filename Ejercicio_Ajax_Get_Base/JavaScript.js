@@ -8,7 +8,7 @@
             fetch('marvel.php')
             .then(res => res.ok ? Promise.resolve(res) : Promise.reject(res))
             .then(res => res.json())
-            .then(console.log(res),res => {
+            .then(console.log(res), res => {
 
                 if(select == null){
 
